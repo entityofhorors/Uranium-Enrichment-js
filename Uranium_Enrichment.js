@@ -1856,7 +1856,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 
                 if (n.element === "lamp_oil") {
 
-                    if (Math.random()<0.35){changePixel(pixel, "heavy_actinide_saturated_kerosene")} else {changePixel(pixel, "fission_product_saturated_kerosene")}
+                    if (Math.random()<0.75){changePixel(pixel, "heavy_actinide_saturated_kerosene")} else {changePixel(pixel, "fission_product_saturated_kerosene")}
                         deletePixel(c.x, c.y);
                     }
                 }
@@ -1874,28 +1874,6 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "liquids",
         state: "liquid",
         density: 11000,
-	                  tick: function(pixel) {
-            let coords = [
-                {x: pixel.x+1, y: pixel.y},
-                {x: pixel.x-1, y: pixel.y},
-                {x: pixel.x, y: pixel.y+1},
-                {x: pixel.x, y: pixel.y-1},
-            ];
-
-            for (let c of coords) {
-                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
-
-                let n = pixelMap[c.x][c.y];
-                if (!n) continue;
-
-                if (n.element === "lamp_oil") {
-
-                    if (Math.random()<0.35){changePixel(pixel, "heavy_actinide_saturated_kerosene")} else {changePixel(pixel, "fission_product_saturated_kerosene")}
-                        deletePixel(c.x, c.y);
-                    }
-                }
-            }
-        
      };	
 	 // ---------------- Fission Product Saturated Kerosene ----------------
     elements.fission_product_saturated_kerosene = {
@@ -1927,7 +1905,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 
                 if (n.element === "hydroxylamine") {
 
-                    if (Math.random()<0.35){changePixel(pixel, "uranium_saturated_kerosene")} else {changePixel(pixel, "aqueous_plutonium")}
+                    if (Math.random()<0.75){changePixel(pixel, "uranium_saturated_kerosene")} else {changePixel(pixel, "aqueous_plutonium")}
                         deletePixel(c.x, c.y);
                     }
                 }
@@ -2229,7 +2207,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (!n) continue;
 
                 if (n.element === "water") {
-                    if (Math.random()<0.35){changePixel(pixel, "nitric_acid")} else {changePixel(pixel, "nitric_oxide")}
+                    if (Math.random()<0.5){changePixel(pixel, "nitric_acid")} else {changePixel(pixel, "nitric_oxide")}
                         deletePixel(c.x, c.y);
 
                 }

@@ -1330,7 +1330,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 		tempHigh: 1132.2,
         density: 19100,
 			reactions: {
-		"neutron": { elem1:"n_explosion", tempMin:500, chance:0.1 }
+		"neutron": { elem1:"n_explosion", tempMin:350, chance:0.1 }
 	},
 	                  tick: function(pixel) {
             let coords = [
@@ -1591,7 +1591,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 		tempHigh: 1132.2,
         density: 19100,
 			reactions: {
-		"neutron": { elem1:"n_explosion", tempMin:350, chance:0.1 }
+		"neutron": { elem1:"n_explosion", tempMin:250, chance:0.1 }
 	},
 	                  tick: function(pixel) {
             let coords = [
@@ -2144,7 +2144,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 		tempHigh: 1132.2,
         density: 19100,
 			reactions: {
-		"neutron": { elem1:"n_explosion", tempMin:350, chance:0.01 }}
+		"neutron": { elem1:"n_explosion", tempMin:250, chance:0.01 }}
 	},
  // ---------------- Nitric Oxide ----------------
     elements.nitric_oxide = {
@@ -2399,7 +2399,8 @@ elements.neutron.reactions = {
 		"glass": { elem1:null, elem2:"rad_glass" },
 		"glass_shard": { elem1:null, elem2:"rad_shard" },
 		"cloud": { elem1:null, elem2:"rad_cloud" },
-		"rain_cloud": { elem1:null, elem2:"rad_cloud" }
+		"rain_cloud": { elem1:null, elem2:"rad_cloud" },
+	    "mox_fuel": { temp2:75 },
 	},
 
 elements.ammonia.burnInto = ["nitric_oxide","fire"],

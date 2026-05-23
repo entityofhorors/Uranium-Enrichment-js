@@ -2320,6 +2320,17 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "liquids",
         state: "liquid",
         density: 1210,
+		tempHigh: 56.5,
+		stateHigh: "hydroxylamine_gas",
+		 };
+ // ---------------- Hydroxylamine Gas ----------------
+    elements.hydroxylamine_gas = {
+        color: ["#ffffff","#def5ff","#c9efff"],
+        behavior: behaviors.GAS,
+        category: "states",
+        state: "gas",
+        density: 1210,
+		temp: 56.5,
 		 };
  // ---------------- Platinum ----------------
     elements.platinum = {
@@ -2329,7 +2340,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         state: "solid",
         density: 21460,
 		tempHigh: 1786,
-		breakInto: "platinum_catalyst"
+		breakInto: "platinum_catalyst",
 		 };
  // ---------------- Platinum Catalyst ----------------
     elements.platinum_catalyst = {

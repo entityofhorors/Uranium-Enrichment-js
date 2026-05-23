@@ -1855,13 +1855,13 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (!n) continue;
 
                 if (n.element === "lamp_oil") {
-                    if (Math.random() < 0.000075) {
+
                     if (Math.random()<0.35){changePixel(pixel, "heavy_actinide_saturated_kerosene")} else {changePixel(pixel, "fission_product_saturated_kerosene")}
                         deletePixel(c.x, c.y);
                     }
                 }
             }
-        }
+        
      };	
 	 // ---------------- Heavy Actinide Saturated Kerosene ----------------
     elements.heavy_actinide_saturated_kerosene = {
@@ -1889,13 +1889,13 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (!n) continue;
 
                 if (n.element === "lamp_oil") {
-                    if (Math.random() < 0.000075) {
+
                     if (Math.random()<0.35){changePixel(pixel, "heavy_actinide_saturated_kerosene")} else {changePixel(pixel, "fission_product_saturated_kerosene")}
                         deletePixel(c.x, c.y);
                     }
                 }
             }
-        }
+        
      };	
 	 // ---------------- Fission Product Saturated Kerosene ----------------
     elements.fission_product_saturated_kerosene = {
@@ -1926,13 +1926,13 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (!n) continue;
 
                 if (n.element === "hydroxylamine") {
-                    if (Math.random() < 0.000075) {
+
                     if (Math.random()<0.35){changePixel(pixel, "uranium_saturated_kerosene")} else {changePixel(pixel, "aqueous_plutonium")}
                         deletePixel(c.x, c.y);
                     }
                 }
             }
-        }
+        
      };	
  // ---------------- Uranium Saturated Kerosene ----------------
     elements.uranium_saturated_kerosene = {

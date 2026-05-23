@@ -1815,7 +1815,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 let n = pixelMap[c.x][c.y];
                 if (!n) continue;
 
-                if (n.element === "concentrated_nitic_acid") {
+                if (n.element === "concentrated_nitric_acid") {
                     if (Math.random() < 0.1) {
                         changePixel(pixel, "dissolved_spent_nuclear_fuel");
                         deletePixel(c.x, c.y);

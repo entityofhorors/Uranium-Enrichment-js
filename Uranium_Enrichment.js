@@ -1824,6 +1824,8 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
             }
         }
      };	
+
+
 	 // ---------------- Dissolved Spent Nuclear Fuel ----------------
     elements.dissolved_spent_nuclear_fuel = {
         color: ["#a6a6a6","#949494","#494d4a","#8a8a8a","#787878","#b5b5b5"],

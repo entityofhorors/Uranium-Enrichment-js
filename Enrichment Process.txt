@@ -123,7 +123,15 @@ Radioactive_Ore (P) + Water (B)(L) = Radioactive_slurry (L) And Rocks (B)(P)
 
 Radioactive_Slurry (L) + Sulfuric_acid (L) = Yellowcake (P) 
 
-Yellowcake (P) + Vaporization (PRO) = Unenriched_uranium (G) ]
+Potassium (B)(P) + Burning (PRO) = Caustic_Potash (B)(P)
+
+Caustic_Potash (B)(P) + Hydrofluric_Acid (L) = Potassium_Bifloride (P) 
+
+Potassium_Bifloride (P) + Hydrogen_Floride (G) = Potassium_Bifloride/Hydrogen_Floride_Mixture (G) UA
+
+Potassium_Bifloride/Hydrogen_Floride_Mixture (G) + Electrolysis (PRO) = Florine (G) UA
+
+Yellowcake (P) + Florine (G) + Temp(2800) = Unenriched_uranium (G) ]
 
 Enrichment: [
 

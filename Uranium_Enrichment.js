@@ -962,7 +962,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
     }
 	};
  // ---------------- Calcium Floride ----------------
-    elements.calcium_fluoride = {'
+    elements.calcium_fluoride = {
         color: ["#b5b5b5", "#85715e", "#6b553f",],
         behavior: behaviors.POWDER,
         category: "powders",

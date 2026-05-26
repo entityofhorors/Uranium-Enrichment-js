@@ -937,6 +937,14 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         state: "gas",
         density: 2370,
 	};
+ // ---------------- Fluorine ----------------
+    elements.fluorine = {
+        color: "#dce0b1",
+        behavior: behaviors.GAS,
+        category: "gases",
+        state: "gas",
+        density: 1.696,
+	};
  // ---------------- Calcium Floride ----------------
     elements.calcium_fluoride = {
         color: ["#b5b5b5", "#85715e", "#6b553f",],

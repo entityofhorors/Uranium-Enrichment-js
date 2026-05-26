@@ -1873,6 +1873,35 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 	],
         category: "liquids",
         state: "liquid",
+        density: 9000,
+		tempHigh: 37,
+		stateHigh: ["high_level_nuclear_waste", "high_level_nuclear_waste", "high_level_nuclear_waste", "carbon_dioxide", "fire"],
+     };	
+	 // ---------------- High Level Nuclear Waste ----------------
+    elements.high_level_nuclear_waste = {
+        color: ["#b3b38b","#33314d","#857756"],
+        behavior: [
+	 "XX|XX|XX",
+		"XX|RL:radiation%4|XX",
+		"M2|M1|M2"
+	],
+        category: "powders",
+        state: "solid",
+        density: 11000,
+		temp: 150,
+		temLow: "20",
+		stateLow: "high_level_nuclear_waste_ceramic",
+     };	
+	 // ---------------- High Level Nuclear Waste Ceramic ----------------
+    elements.high_level_nuclear_waste_ceramic = {
+        color: ["#a37503","#7a6530","#615740"],
+        behavior: [
+	 "XX|XX|XX",
+		"XX|RL:radiation%2|XX",
+		"M2|M1|M2"
+	],
+        category: "powders",
+        state: "solid",
         density: 11000,
      };	
 	 // ---------------- Fission Product Saturated Kerosene ----------------

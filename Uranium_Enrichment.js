@@ -1879,7 +1879,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
      };	
 	 // ---------------- High Level Nuclear Waste ----------------
     elements.high_level_nuclear_waste = {
-        color: ["#b3b38b","#33314d","#857756"],
+        color: ["#b3b38b","#7a6d30","#857756"],
         behavior: [
 	 "XX|XX|XX",
 		"XX|RL:radiation%4|XX",
@@ -1889,7 +1889,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         state: "solid",
         density: 11000,
 		temp: 150,
-		temLow: "20",
+		tempLow: 20,
 		stateLow: "high_level_nuclear_waste_ceramic",
      };	
 	 // ---------------- High Level Nuclear Waste Ceramic ----------------

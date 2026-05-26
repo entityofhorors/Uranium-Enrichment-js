@@ -191,21 +191,21 @@ MOX Fuel: {
 
 Plutonium (P) + Nitric_Acid (L) (LONG) = Plutonium_Nitrate (P) 
 
-Reactor_Grade_Uranium (P) + Nitric_Acid (L) (LONG) = Uranyl_Nitrate (P) UA
+Reactor_Grade_Uranium (P) + Nitric_Acid (L) (LONG) = Uranyl_Nitrate (P) 
 
-Plutonium_Nitrate (P) + Nitric_Acid (L) = Plutonium_Nitrate_Nitric_Acid (L) UA
+Plutonium_Nitrate (P) + Nitric_Acid (L) = Plutonium_Nitrate_Nitric_Acid (L) 
 
-Plutonium_Nitrate_Nitric_Acid (L) + Uranyl_Nitrate (P) = Nitrate_Mixture (L) UA
+Plutonium_Nitrate_Nitric_Acid (L) + Uranyl_Nitrate (P) = Nitrate_Mixture (L) 
 
-Nitrate_Mixture (L) + Ammonia (B)(G) = Ammonia_Nitrate_Mixture (L) UA
+Nitrate_Mixture (L) + Ammonia (B)(G) = Ammonia_Nitrate_Mixture (L) 
 
-Ammonia_Nitrate_Mixture (L) + Hydrogen (B)(G) = Ammonia_Nitrate_Hydrogen_Mixture (L) UA
+Ammonia_Nitrate_Mixture (L) + Hydrogen (B)(G) = Ammonia_Nitrate_Hydrogen_Mixture (L) 
 
-Ammonia_Nitrate_Hydrogen_Mixture (L) + Heat (PRO) = MOX_Fuel (P) UA }
+Ammonia_Nitrate_Hydrogen_Mixture (L) + Heat (PRO) = MOX_Fuel (P) }
 
-Heavy_Actinide_Saturated_Kerosene (L) + Heat (PRO) = High_Level_Nuclear_Waste (P) UA
+Heavy_Actinide_Saturated_Kerosene (L) + Heat (PRO) = High_Level_Nuclear_Waste (P) 
 
-High_Level_Nuclear_Waste (P) + Cooling (PRO) = High_Level_Nuclear_Waste_Ceramic (P) UA ]
+High_Level_Nuclear_Waste (P) + Cooling (PRO) = High_Level_Nuclear_Waste_Ceramic (P) ]
 
 Msc. Reactions: [
 

@@ -936,30 +936,9 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "gases",
         state: "gas",
         density: 2370,
-				                  tick: function(pixel) {
-            let coords = [
-                {x: pixel.x+1, y: pixel.y},
-                {x: pixel.x-1, y: pixel.y},
-                {x: pixel.x, y: pixel.y+1},
-                {x: pixel.x, y: pixel.y-1},
-            ];
-
-            for (let c of coords) {
-                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
-
-                let n = pixelMap[c.x][c.y];
-                if (!n) continue;
-
-                if (n.element === "iron") {
-                    if (Math.random() < 0.1) {
-						if (pixel.chargeCD >= 0) {
-                        changePixel(pixel, "potassium_bifluoride_hydrogen_fluoride_mixture");
-                        deletePixel(c.x, c.y);
-                    }
-                }
-            }
-        }
-    }
+		reactions = {
+			
+		}
 	};
  // ---------------- Calcium Floride ----------------
     elements.calcium_fluoride = {
@@ -968,7 +947,6 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "powders",
         state: "solid",
         density: 3100,
-        
      };
  // ---------------- Iradiated Water ----------------
     elements.irradiated_water = {
@@ -2556,3 +2534,12 @@ if (!elements.gold.reactions){elements.gold.reactions = {}}
 elements.gold.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}
  if (!elements.silver.reactions){elements.silver.reactions = {}}
 elements.silver.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}
+
+if (!elements.copper.reactions){elements.copper.reactions = {}}
+elements.copper.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}
+ if (!elements.iron.reactions){elements.iron.reactions = {}}
+elements.iron.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}
+if (!elements.gold.reactions){elements.gold.reactions = {}}
+elements.gold.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}
+ if (!elements.silver.reactions){elements.silver.reactions = {}}
+elements.silver.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}

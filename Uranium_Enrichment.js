@@ -443,8 +443,30 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "powders",
         state: "solid",
         density: 2000,
-        tempHigh: 2880,
-        stateHigh: "unenriched_uranium"
+		                  tick: function(pixel) {
+            let coords = [
+                {x: pixel.x+1, y: pixel.y},
+                {x: pixel.x-1, y: pixel.y},
+                {x: pixel.x, y: pixel.y+1},
+                {x: pixel.x, y: pixel.y-1},
+            ];
+
+            for (let c of coords) {
+                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
+
+                let n = pixelMap[c.x][c.y];
+                if (!n) continue;
+
+                if (n.element === "fluorine") {
+					if (pixel.temp >= 2800) {
+                    if (Math.random() < 0.1) {
+                        changePixel(pixel, "unenriched_uranium");
+                        deletePixel(c.x, c.y);
+                    }
+                }
+            }
+        }
+	}
      };
  // ---------------- Unenriched Uranium ----------------
     elements.unenriched_uranium = {
@@ -810,7 +832,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (!n) continue;
 
                 if (n.element === "sulfuric_acid") {
-                    if (Math.random()<0.5){changePixel(pixel, "hydrogen_fluorite")} else {changePixel(pixel, "hydrofluric_acid")}
+                    if (Math.random()<0.5){changePixel(pixel, "hydrogen_fluoride")} else {changePixel(pixel, "hydrofluoric_acid")}
                         deletePixel(c.x, c.y);
                     }
                 }
@@ -818,7 +840,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         
      };
  // ---------------- Hydroden Flourite ----------------
-    elements.hydrogen_fluorite = {
+    elements.hydrogen_fluoride = {
         color: "#919191",
         behavior: behaviors.GAS,
         category: "gases",
@@ -847,16 +869,100 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
             }
         }
      };
- // ---------------- Hydrofluric Acid ----------------
-    elements.hydrofluric_acid = {
+ // ---------------- Hydrofluoric Acid ----------------
+    elements.hydrofluoric_acid = {
         color: "#b3c4af",
         behavior: behaviors.LIQUID,
         category: "liquids",
         state: "liquid",
         density: 1200,
+		                  tick: function(pixel) {
+            let coords = [
+                {x: pixel.x+1, y: pixel.y},
+                {x: pixel.x-1, y: pixel.y},
+                {x: pixel.x, y: pixel.y+1},
+                {x: pixel.x, y: pixel.y-1},
+            ];
+
+            for (let c of coords) {
+                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
+
+                let n = pixelMap[c.x][c.y];
+                if (!n) continue;
+
+                if (n.element === "caustic_potash") {
+                    if (Math.random() < 0.1) {
+                        changePixel(pixel, "potassium_bifluoride");
+                        deletePixel(c.x, c.y);
+                    }
+                }
+            }
+        }
      };
+ // ---------------- Potassium Bifluoride ----------------
+    elements.potassium_bifluoride = {
+        color: "#959c94",
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "powder",
+        density: 2370,
+		                  tick: function(pixel) {
+            let coords = [
+                {x: pixel.x+1, y: pixel.y},
+                {x: pixel.x-1, y: pixel.y},
+                {x: pixel.x, y: pixel.y+1},
+                {x: pixel.x, y: pixel.y-1},
+            ];
+
+            for (let c of coords) {
+                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
+
+                let n = pixelMap[c.x][c.y];
+                if (!n) continue;
+
+                if (n.element === "hydrogen_fluoride") {
+                    if (Math.random() < 0.1) {
+                        changePixel(pixel, "potassium_bifluoride_hydrogen_fluoride_mixture");
+                        deletePixel(c.x, c.y);
+                    }
+                }
+            }
+        }
+     };
+ // ---------------- Potassium Bifluoride Hydrogen Fluoride Mixture ----------------
+    elements.potassium_bifluoride_hydrogen_fluoride_mixture = {
+        color: "#666666",
+        behavior: behaviors.GAS,
+        category: "gases",
+        state: "gas",
+        density: 2370,
+				                  tick: function(pixel) {
+            let coords = [
+                {x: pixel.x+1, y: pixel.y},
+                {x: pixel.x-1, y: pixel.y},
+                {x: pixel.x, y: pixel.y+1},
+                {x: pixel.x, y: pixel.y-1},
+            ];
+
+            for (let c of coords) {
+                if (!pixelMap[c.x] || !pixelMap[c.x][c.y]) continue;
+
+                let n = pixelMap[c.x][c.y];
+                if (!n) continue;
+
+                if (n.element === "iron") {
+                    if (Math.random() < 0.1) {
+						if (pixel.charged = true) {
+                        changePixel(pixel, "potassium_bifluoride_hydrogen_fluoride_mixture");
+                        deletePixel(c.x, c.y);
+                    }
+                }
+            }
+        }
+    }
+	};
  // ---------------- Calcium Floride ----------------
-    elements.calcium_fluoride = {
+    elements.calcium_fluoride = {'
         color: ["#b5b5b5", "#85715e", "#6b553f",],
         behavior: behaviors.POWDER,
         category: "powders",
@@ -2444,9 +2550,9 @@ delete elements.molten_uranium
 
 if (!elements.copper.reactions){elements.copper.reactions = {}}
 elements.copper.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}
- if (!elements.iron.reactions){elements.copper.reactions = {}}
+ if (!elements.iron.reactions){elements.iron.reactions = {}}
 elements.iron.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}
-if (!elements.gold.reactions){elements.copper.reactions = {}}
+if (!elements.gold.reactions){elements.gold.reactions = {}}
 elements.gold.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}
- if (!elements.silver.reactions){elements.copper.reactions = {}}
+ if (!elements.silver.reactions){elements.silver.reactions = {}}
 elements.silver.reactions.molten_salt = {charged: true, elem2: ["chlorine", "molten_sodium"]}

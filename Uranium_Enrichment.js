@@ -952,7 +952,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 
                 if (n.element === "iron") {
                     if (Math.random() < 0.1) {
-						if (pixel.charge >= 0) {
+						if (pixel.chargeCD >= 0) {
                         changePixel(pixel, "potassium_bifluoride_hydrogen_fluoride_mixture");
                         deletePixel(c.x, c.y);
                     }

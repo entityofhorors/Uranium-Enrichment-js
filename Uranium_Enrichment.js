@@ -936,9 +936,6 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "gases",
         state: "gas",
         density: 2370,
-		reactions = {
-			
-		}
 	};
  // ---------------- Calcium Floride ----------------
     elements.calcium_fluoride = {
@@ -2538,8 +2535,8 @@ elements.silver.reactions.molten_salt = {charged: true, elem2: ["chlorine", "mol
 if (!elements.copper.reactions){elements.copper.reactions = {}}
 elements.copper.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}
  if (!elements.iron.reactions){elements.iron.reactions = {}}
-elements.iron.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}
+elements.iron.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}
 if (!elements.gold.reactions){elements.gold.reactions = {}}
-elements.gold.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}
+elements.gold.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}
  if (!elements.silver.reactions){elements.silver.reactions = {}}
-elements.silver.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}}
+elements.silver.reactions.potassium_bifluoride_hydrogen_fluoride_mixture = {charged: true, elem2: "fluorine"}

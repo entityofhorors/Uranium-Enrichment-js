@@ -330,7 +330,23 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "liquids",
         state: "liquid",
         density: 1840,
-     };
+		alias:["h2so4","sulphuric_acid","oil_of_vitriol"],
+reactions: {
+		"iron": {elem1:"iron_sulfate", elem2:"hydrogen" },
+		"copper": {elem1:"copper_sulfate", elem2:"hydrogen" },
+		"zinc": {elem1:"zinc_sulfate", elem2:"hydrogen" },
+		"aluminum": {elem1:"aluminum_sulfate", elem2:"hydrogen" },
+		"bauxite": {elem1:"aluminum_sulfate", elem2:"hydrogen" },
+		"zinc": {elem1:"zinc_sulfate", elem2:"hydrogen" },
+		"magnesium": {elem1:"magnesium_sulfate", elem2:"hydrogen" },
+		"potassium": {elem1:"potassium_sulfate", elem2:"hydrogen" },
+		"sodium": {elem1:"sodium_sulfate", elem2:"hydrogen" },
+		"calcium": {elem1:"calcium_sulfate", elem2:"hydrogen" },
+		"tin": {elem1:"tin_sulfate", elem2:"hydrogen" },
+		"lead": {elem1:"lead_sulfate", elem2:"hydrogen" },
+	    "sugar": {temp1:100, temp2:100, elem2:["steam","carbon"] },
+},
+		};
  // ---------------- Vanadium Catalyst Water ----------------
     elements.vanadium_catalyst_water = {
         color: "#ffc800",

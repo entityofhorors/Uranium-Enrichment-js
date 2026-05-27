@@ -349,7 +349,7 @@ reactions: {
 		};
  // ---------------- Iron Sulfate ----------------
     elements.iron_sulfate = {
-        color: ["#66d19c", "#ebe8e8", "#edebeb",],
+		color: ["#66d19c", "#39805d", "#38d688",],
         behavior: behaviors.POWDER,
         category: "powders",
         state: "solid",
@@ -357,7 +357,7 @@ reactions: {
      };
  // ---------------- Zinc Sulfate ----------------
     elements.zinc_sulfate = {
-        color: ["#e8e8e8", "#39805d", "#38d688",],
+        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
         behavior: behaviors.POWDER,
         category: "powders",
         state: "solid",

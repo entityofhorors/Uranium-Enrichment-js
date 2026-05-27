@@ -460,7 +460,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
                 if (n.element === "fluorine") {
 					if (pixel.temp >= 2800) {
                     if (Math.random() < 0.1) {
-                        changePixel(pixel, "unenriched_uranium");
+                        changePixel(pixel, "uranium_hexafluoride");
                         deletePixel(c.x, c.y);
                     }
                 }
@@ -469,7 +469,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
 	}
      };
  // ---------------- Unenriched Uranium ----------------
-    elements.unenriched_uranium = {
+    elements.uranium_hexafluoride = {
         color: ["#456340", "#163819", "#325421",],
         behavior: [ 
          "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
@@ -480,6 +480,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         state: "gas",
         density: 2500,
         temp: 2000,
+		alias:["unenriched_uranium","hex"],
                   tick: function(pixel) {
             let coords = [
                 {x: pixel.x+1, y: pixel.y},

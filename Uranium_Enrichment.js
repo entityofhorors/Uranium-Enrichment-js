@@ -347,6 +347,22 @@ reactions: {
 	    "sugar": {temp1:100, temp2:100, elem2:["steam","carbon"] },
 },
 		};
+ // ---------------- Iron Sulfate ----------------
+    elements.iron_sulfate = {
+        color: ["#66d19c", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 3000,
+     };
+ // ---------------- Zinc Sulfate ----------------
+    elements.zinc_sulfate = {
+        color: ["#e8e8e8", "#39805d", "#38d688",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 3540,
+     };
  // ---------------- Vanadium Catalyst Water ----------------
     elements.vanadium_catalyst_water = {
         color: "#ffc800",

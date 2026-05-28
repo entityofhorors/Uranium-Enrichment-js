@@ -258,9 +258,10 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         behavior: behaviors.POWDER,
         category: "powders",
         state: "solid",
-        density: 3360,
+        density: 2960,
         tempHigh: 1700,
         stateHigh: ["molten_calcium", "carbon_dioxide", "sulfur_dioxide"],
+		alias:["anhydrite","CaSO4"],
 
      };
  // ---------------- Sulfur Dioxide ----------------
@@ -334,7 +335,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         category: "liquids",
         state: "liquid",
         density: 1840,
-		alias:["h2so4","sulphuric_acid","oil_of_vitriol"],
+		alias:["H2SO4","sulphuric_acid","oil_of_vitriol"],
 reactions: {
 		"iron": {elem1:"iron_sulfate", elem2:"hydrogen" },
 		"copper": {elem1:"copper_sulfate", elem2:"hydrogen" },
@@ -357,6 +358,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 3000,
+		alias:""feso4
      };
  // ---------------- Zinc Sulfate ----------------
     elements.zinc_sulfate = {
@@ -365,6 +367,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 3540,
+		alias:"znso4"
      };
  // ---------------- Aluminum Sulfate ----------------
     elements.aluminum_sulfate = {
@@ -373,6 +376,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 2672,
+		alias:"al2s3o12"
      };
  // ---------------- Magnesium Sulfate ----------------
     elements.magnesium_sulfate = {
@@ -381,7 +385,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 1680,
-		alias:["epsom_salt","bath_salts"],
+		alias:["epsom_salt","bath_salts","mgso4"],
      };
  // ---------------- Potassium Sulfate ----------------
     elements.potassium_sulfate = {
@@ -390,7 +394,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 2660,
-		alias:["sulfate_of_potash","arcanite","potash_of_sulfur"],
+		alias:["sulfate_of_potash","arcanite","potash_of_sulfur","k2so4"],
      };
  // ---------------- Sodium Sulfate ----------------
     elements.sodium_sulfate = {
@@ -399,16 +403,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 2664,
-		alias:"sulfate_of_soda",
-     };
- // ---------------- Calcium Sulfate ----------------
-    elements.calcium_sulfate = {
-        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
-        behavior: behaviors.POWDER,
-        category: "powders",
-        state: "solid",
-        density: 2960,
-		alias:"anhydrite",
+		alias:["sulfate_of_soda","na2so4"],
      };
  // ---------------- Tin Sulfate ----------------
     elements.tin_sulfate = {
@@ -417,7 +412,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 2960,
-		alias:"stannus_sulfate",
+		alias:["stannus_sulfate","snso4"],
      };
  // ---------------- Lead Sulfate ----------------
     elements.lead_sulfate = {
@@ -426,19 +421,32 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 2960,
-		alias:["fast_white","milk_white","anglesite"],
+		alias:["fast_white","milk_white","anglesite","pbso4"],
 		reactions: {
 			"blood": {elem2:"infection"}
 		},
      };
  // ---------------- Carbon ----------------
-    elements.coabon = {
+    elements.carbon = {
         color: ["#0f0f0f", "#212121", "#303030",],
         behavior: behaviors.WALL,
         category: "solids",
         state: "solid",
         density: 1900,
-		alias:"graphite",
+		alias:["graphite","c"],
+     };
+ // ---------------- Coabon ----------------
+    elements.coabon = {
+        color: ["#0f0f0f", "#212121", "#303030",],
+        behavior: [ 
+         "XX|XX|XX",
+         "XX|CH:n_explosion%0.05|XX",
+         "M2|M1|M2",
+    ],
+        category: "solids",
+        state: "solid",
+        density: 1900,
+		alias:["graphite","c"],
      };
  // ---------------- Vanadium Catalyst Water ----------------
     elements.vanadium_catalyst_water = {

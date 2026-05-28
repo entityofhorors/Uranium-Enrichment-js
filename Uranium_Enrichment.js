@@ -440,7 +440,7 @@ reactions: {
         color: ["#0f0f0f", "#212121", "#303030",],
         behavior: [ 
          "XX|XX|XX",
-         "XX|CH:n_explosion%0.05|XX",
+         "XX|CH:n_explosion%0.005|XX",
          "M2|M1|M2",
     ],
         category: "solids",

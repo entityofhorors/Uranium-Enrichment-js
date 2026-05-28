@@ -337,7 +337,6 @@ reactions: {
 		"zinc": {elem1:"zinc_sulfate", elem2:"hydrogen" },
 		"aluminum": {elem1:"aluminum_sulfate", elem2:"hydrogen" },
 		"bauxite": {elem1:"aluminum_sulfate", elem2:"hydrogen" },
-		"zinc": {elem1:"zinc_sulfate", elem2:"hydrogen" },
 		"magnesium": {elem1:"magnesium_sulfate", elem2:"hydrogen" },
 		"potassium": {elem1:"potassium_sulfate", elem2:"hydrogen" },
 		"sodium": {elem1:"sodium_sulfate", elem2:"hydrogen" },
@@ -363,6 +362,80 @@ reactions: {
         state: "solid",
         density: 3540,
      };
+ // ---------------- Aluminum Sulfate ----------------
+    elements.aluminum_sulfate = {
+        color: ["#b8b2b2", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2672,
+     };
+ // ---------------- Magnesium Sulfate ----------------
+    elements.magnesium_sulfate = {
+        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 1680,
+		alias:["epsom_salt","bath_salts"],
+     };
+ // ---------------- Potassium Sulfate ----------------
+    elements.potassium_sulfate = {
+        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2660,
+		alias:["sulfate_of_potash","arcanite","potash_of_sulfur"],
+     };
+ // ---------------- Sodium Sulfate ----------------
+    elements.sodium_sulfate = {
+        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2664,
+		alias:"sulfate_of_soda",
+     };
+ // ---------------- Calcium Sulfate ----------------
+    elements.calcium_sulfate = {
+        color: ["#e8e8e8", "#ebe8e8", "#edebeb",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2960,
+		alias:"anhydrite",
+     };
+ // ---------------- Tin Sulfate ----------------
+    elements.tin_sulfate = {
+        color: ["#f8faa2", "#f2f589", "#fdffc2",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2960,
+		alias:"stannus_sulfate",
+     };
+ // ---------------- Lead Sulfate ----------------
+    elements.lead_sulfate = {
+        color: ["#f8faa2", "#f2f589", "#fdffc2",],
+        behavior: behaviors.POWDER,
+        category: "powders",
+        state: "solid",
+        density: 2960,
+		alias:["fast_white","milk_white","anglesite"],
+		reactions: {
+			"blood": {elem2:"infection"}
+		},
+     };
+ // ---------------- Carbon ----------------
+    elements.coabon = {
+        color: ["#0f0f0f", "#212121", "#303030",],
+        behavior: behaviors.WALL,
+        category: "solids",
+        state: "solid",
+        density: 1900,
+		alias:"graphite",
+     };
  // ---------------- Vanadium Catalyst Water ----------------
     elements.vanadium_catalyst_water = {
         color: "#ffc800",
@@ -381,7 +454,7 @@ reactions: {
         color: ["#263623", "#102912", "#545454",],
         behavior: [ 
          "CR:radiation%.02|CR:radiation%.02|CR:radiation%.02",
-         "CR:radiation%.02|XX|CR:radiation%.02",
+         "CR:radiation%.02|XX|CR:radiation%.02"
          "M2|M1|M2",
     ],
         category: "land",

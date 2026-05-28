@@ -458,7 +458,7 @@ reactions: {
         color: ["#263623", "#102912", "#545454",],
         behavior: [ 
          "CR:radiation%.02|CR:radiation%.02|CR:radiation%.02",
-         "CR:radiation%.02|XX|CR:radiation%.02"
+         "CR:radiation%.02|XX|CR:radiation%.02",
          "M2|M1|M2",
     ],
         category: "land",

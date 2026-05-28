@@ -268,7 +268,7 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
         color: "#e8deb0",
         behavior: [ 
          "M2|M1|M2",
-         "M1|CH:sulfur_trioxide%0.001|M1",
+         "M1|CH:sulfur_trioxide%0.005|M1",
          "M2|M1|M2",
     ],
         category: "gases",

@@ -45,7 +45,7 @@ Vanadium_Pentoxide (P) + Possium_Oxide (P) = Activated_Vanadium_Pentoxide (P) ]
 
 Sulfur Trioxide Production: [
 
-Coal (P) + Burning (B) = Fossil_Feul_Emissions (G) UA
+Coal (P) + Burning (B) = Fossil_Feul_Emissions (G) 
 
 Coal (P) + Vaporisation (B) = Fossil_Feul_Emissions (G)
 

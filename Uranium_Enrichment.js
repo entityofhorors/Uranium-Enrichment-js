@@ -358,7 +358,7 @@ reactions: {
         category: "powders",
         state: "solid",
         density: 3000,
-		alias:""feso4
+		alias:"feso4"
      };
  // ---------------- Zinc Sulfate ----------------
     elements.zinc_sulfate = {

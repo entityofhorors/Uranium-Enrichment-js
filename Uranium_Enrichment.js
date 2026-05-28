@@ -266,7 +266,11 @@ elements.hydrogen.reactions.methane = { "elem1":null, "elem2":"hydrogen_chloride
  // ---------------- Sulfur Dioxide ----------------
     elements.sulfur_dioxide = {
         color: "#e8deb0",
-        behavior: behaviors.GAS,
+        behavior: [ 
+         "M2|M1|M2",
+         "M1|CH:sulfur_trioxide%0.001|M1",
+         "M2|M1|M2",
+    ],
         category: "gases",
         state: "gas",
         density: 2,

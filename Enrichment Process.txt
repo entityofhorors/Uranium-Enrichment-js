@@ -125,19 +125,23 @@ Radioactive_Slurry (L) + Sulfuric_acid (L) = Yellowcake (P)
 
 Potassium (B)(P) + Burning (PRO) = Caustic_Potash (B)(P)
 
-Caustic_Potash (B)(P) + Hydrofluric_Acid (L) = Potassium_Bifloride (P) 
+Caustic_Potash (B)(P) + hydrofluoric_acid (L) = Potassium_Bifluoride (P) 
 
-Potassium_Bifloride (P) + Hydrogen_Floride (G) = Potassium_Bifloride/Hydrogen_Floride_Mixture (G) 
+Potassium_Bifluoride (P) + Hydrogen_Fluoride (G) = Potassium_Bifluoride/Hydrogen_Fluoride_Mixture (G) 
 
-Potassium_Bifloride/Hydrogen_Floride_Mixture (G) + Electrolysis (PRO) = Florine (G) 
+Potassium_Bifluoride/Hydrogen_Fluoride_Mixture (G) + Electrolysis (PRO) = Fluorine (G) 
 
-Yellowcake (P) + Florine (G) + Temp(2800) = Unenriched_uranium (G) ]
+Yellowcake (P) + hydrofluoric_acid (L) = uranium_tetrafluoride (P) UA 
+
+urnaium_tetrafluoride (P) + fluorine (G) = uranium_hexafluoride (P) UA
+
+uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride (G) UA]
 
 Enrichment: [
 
-Unenriched_uranium (G) + Electric (B)(E) = Molten_Reactor_Grade_Uranium (L) And Molten_Depleted_Uranium (L)
+uranium_hexafluoride (G) + Electric (B)(E) = Molten_Reactor_Grade_Uranium (L) And Molten_Depleted_Uranium (L)
 
-Unenriched_uranium (G) + Enrichment_Laser (E) = Molten_Reactor_Grade_Uranium (L) And Molten_Depleted_Uranium (L)
+uranium_hexafluoride (G) + Enrichment_Laser (E) = Molten_Reactor_Grade_Uranium (L) And Molten_Depleted_Uranium (L)
 
 Reactor_Grade_Uranium (P) + Enrichment_Laser (E) = Reactor_Grade_Uranium_Vapor (G)
 
@@ -217,4 +221,4 @@ High_Level_Nuclear_Waste (P) + Cooling (PRO) = High_Level_Nuclear_Waste_Ceramic 
 
 Msc. Reactions: [
 
-Unenriched_uranium (G) + Co2 (B)(G) = Methane (B)(G) ]
+uranium_hexafluoride (G) + Co2 (B)(G) = Methane (B)(G) ]

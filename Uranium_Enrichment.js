@@ -624,6 +624,8 @@ reactions: {
         state: "gas",
         density: 5090,
         temp: 56.5,
+		tempLow: 56,
+		stateLow: "uranium_hexafluoride",
 		alias:["unenriched_uranium","hex"],
                   tick: function(pixel) {
             let coords = [
@@ -641,7 +643,7 @@ reactions: {
 
                 if (n.element === "electric") {
                     if (Math.random() < 0.0003) {
-                    if (Math.random()<0.5){changePixel(pixel, "molten_reactor_grade_uranium")} else {changePixel(pixel, "molten_depleted_uranium")}
+                    if (Math.random()<0.25){changePixel(pixel, "molten_reactor_grade_uranium")} else {changePixel(pixel, "molten_depleted_uranium")}
                         deletePixel(c.x, c.y);
                         
                     }
@@ -659,8 +661,8 @@ reactions: {
                 if (!n) continue;
 
                 if (n.element === "enrichment_laser") {
-                    if (Math.random() < 0.00015) {
-                    if (Math.random()<0.5){changePixel(pixel, "molten_reactor_grade_uranium")} else {changePixel(pixel, "molten_depleted_uranium")}
+                    if (Math.random() < 0.003) {
+                    if (Math.random()<0.25){changePixel(pixel, "exited_uranium_hexafluoride_gas")} else {changePixel(pixel, "unexited_uranium_hexafluoride_gas")}
                         deletePixel(c.x, c.y);
                         
                       }
@@ -669,6 +671,34 @@ reactions: {
             }
         }
     };
+ // ---------------- Exited Uranium Hexafluoride Gas ----------------
+    elements.exited_uranium_hexafluoride_gas = {
+        color: ["#d8f5d3", "#bbedbf", "#f6fff2",],
+        behavior: [ 
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|XX|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+    ],
+        category: "gases",
+        state: "gas",
+        density: 5090,
+        tempLow: 56.5,
+		stateLow: ["fuel_grade_uranium"]
+     };
+ // ---------------- Unexited Uranium Hexafluoride Gas ----------------
+    elements.unexited_uranium_hexafluoride_gas = {
+        color: ["#d8f5d3", "#bbedbf", "#f6fff2",],
+        behavior: [ 
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|XX|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+         "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
+    ],
+        category: "gases",
+        state: "gas",
+        density: 5090,
+        tempLow: 56.5,
+		stateLow: ["depleted_uranium"]
+     };
 // ---------------- Depleted Uranium ----------------
     elements.depleted_uranium = {
         color: ["#171f14", "#0f120e", "#133009"],
@@ -695,7 +725,7 @@ reactions: {
         color: "#ff0000",
         behavior: [ 
          "XX|XX|XX",
-         "M1|DL%3.5|XX",
+         "M1 AND BO|DL%3.5|XX",
          "XX|XX|XX",
     ],
         category: "energy",

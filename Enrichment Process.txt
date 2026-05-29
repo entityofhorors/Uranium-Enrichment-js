@@ -131,11 +131,11 @@ Potassium_Bifluoride (P) + Hydrogen_Fluoride (G) = Potassium_Bifluoride/Hydrogen
 
 Potassium_Bifluoride/Hydrogen_Fluoride_Mixture (G) + Electrolysis (PRO) = Fluorine (G) 
 
-Yellowcake (P) + hydrofluoric_acid (L) = uranium_tetrafluoride (P) UA 
+Yellowcake (P) + hydrofluoric_acid (L) = uranium_tetrafluoride (P) 
 
-urnaium_tetrafluoride (P) + fluorine (G) = uranium_hexafluoride (P) UA
+urnaium_tetrafluoride (P) + fluorine (G) = uranium_hexafluoride (P) 
 
-uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride_gas (G) UA]
+uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride_gas (G) ]
 
 Enrichment: [
 

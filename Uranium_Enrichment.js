@@ -542,7 +542,7 @@ reactions: {
 
                 if (n.element === "sulfuric_acid") {
                     if (Math.random() < 0.1) {
-                        changePixel(pixel, "yellowcake");
+                        changePixel(pixel, "");
                         deletePixel(c.x, c.y);
                     }
                 }
@@ -574,20 +574,47 @@ reactions: {
                 let n = pixelMap[c.x][c.y];
                 if (!n) continue;
 
-                if (n.element === "fluorine") {
-					if (pixel.temp >= 2800) {
+                if (n.element === "hydrofluoric_acid") {
                     if (Math.random() < 0.1) {
-                        changePixel(pixel, "uranium_hexafluoride");
+                        changePixel(pixel, "uranium_tetrafluoride");
                         deletePixel(c.x, c.y);
                     }
                 }
             }
         }
-	}
      };
- // ---------------- Unenriched Uranium ----------------
+ // ---------------- Uranium Tetrafluoride ----------------
+    elements.uranium_tetrafluoride = {
+        color: ["#597354", "#163819", "#325421",],
+        behavior: [ 
+         "CR:radiation%.03 AND CH:water>irradiated_water|CR:radiation%.03 AND CH:water>irradiated_water|CR:radiation%.03 AND CH:water>irradiated_water",
+         "CR:radiation%.03 AND CH:water>irradiated_water|XX|CR:radiation%.03 AND CH:water>irradiated_water",
+         "M2 AND CH:water>irradiated_water|M1 AND CH:water>irradiated_water|M2 AND CH:water>irradiated_water",
+    ],
+        category: "powders",
+        state: "solid",
+        density: 6070,
+		reactions: {
+			"fluorine":{elem1:"uranium_hexafluoride",elem2:"uranium_hexafluoride",temp1:300,temp2:300},
+		},
+     };
+ // ---------------- Uranium Hexafluoride ----------------
     elements.uranium_hexafluoride = {
-        color: ["#456340", "#163819", "#325421",],
+        color: ["#d8f5d3", "#bbedbf", "#f6fff2",],
+		behavior: [
+         "CR:radiation%.03 AND CH:water>irradiated_water|CR:radiation%.03 AND CH:water>irradiated_water|CR:radiation%.03 AND CH:water>irradiated_water",
+         "CR:radiation%.03 AND CH:water>irradiated_water|XX|CR:radiation%.03 AND CH:water>irradiated_water",
+         "M2 AND CH:water>irradiated_water|M1 AND CH:water>irradiated_water|M2 AND CH:water>irradiated_water",
+	],
+        category: "powders",
+        state: "solid",
+        density: 5090,
+        tempHigh: 56.5,
+		stateHigh: "uranium_hexafluoride_gas"
+     };
+ // ---------------- Uranium Hexafluoride Gas ----------------
+    elements.uranium_hexafluoride_gas = {
+        color: ["#b4d9ad", "#86b089", "#7fa66c",],
         behavior: [ 
          "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
          "M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5|XX|M1 AND CR:radiation%.03 AND CH:water>irradiated_water%1.5",
@@ -595,8 +622,8 @@ reactions: {
     ],
         category: "gases",
         state: "gas",
-        density: 2500,
-        temp: 2000,
+        density: 5090,
+        temp: 56.5,
 		alias:["unenriched_uranium","hex"],
                   tick: function(pixel) {
             let coords = [

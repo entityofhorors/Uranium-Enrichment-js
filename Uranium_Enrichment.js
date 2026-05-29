@@ -694,9 +694,9 @@ reactions: {
     elements.enrichment_laser = {
         color: "#ff0000",
         behavior: [ 
-         "CR:radiation%.05 AND CH:water>irradiated_water%1.5|CR:radiation%.05 AND CH:water>irradiated_water%1.5|CR:radiation%.05 AND CH:water>irradiated_water%1.5",
-         "CR:radiation%.05 AND CH:water>irradiated_water%1.5|DL%3.5|CR:radiation%.05 AND CH:water>irradiated_water%1.5",
-         "CR:radiation%.05 AND CH:water>irradiated_water%1.5|M1 AND BO AND CH:water>irradiated_water%1.5|CR:radiation%.05 AND CH:water>irradiated_water%1.5",
+         "XX|XX|XX",
+         "M1|DL%3.5|XX",
+         "XX|XX|XX",
     ],
         category: "energy",
         state: "gas",

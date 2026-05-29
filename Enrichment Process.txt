@@ -135,7 +135,7 @@ Yellowcake (P) + hydrofluoric_acid (L) = uranium_tetrafluoride (P) UA
 
 urnaium_tetrafluoride (P) + fluorine (G) = uranium_hexafluoride (P) UA
 
-uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride (G) UA]
+uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride_gas (G) UA]
 
 Enrichment: [
 

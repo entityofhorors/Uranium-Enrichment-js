@@ -443,7 +443,7 @@ reactions: {
          "XX|CH:n_explosion%0.005|XX",
          "M2|M1|M2",
     ],
-        category: "solids",
+        category: "special",
         state: "solid",
         density: 1900,
 		alias:["graphite","c"],

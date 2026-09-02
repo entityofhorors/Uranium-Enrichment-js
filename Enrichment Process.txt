@@ -73,7 +73,7 @@ Fluorite (P) + Sulfuric_Acid (L) = Hydrogen_Fluoride (G) And Hydrofluoric_Acid (
 
 Hydrogen_Fluoride (G) + Calcium (B)(P) = Calcium_Fluoride (P)
 
-Alumina (L) + Calcium_Fluoride (P) = Aluminum]
+Alumina (L) + Calcium_Fluoride (P) = Aluminum (B)(S)]
 
 Natrual_Gas (G) + Burning (PRO) = Methane (B)(G)
 
@@ -119,9 +119,41 @@ Sulfer_Trioxide (G) + Vanadium_Catalyst_Water (L) = Sulfuric_Acid (L)}
 
 Radioactive Ore Processing: [
 
-Radioactive_Ore (P) + Water (B)(L) = Radioactive_slurry (L) And Rocks (B)(P)
+Radioactive_Ore (P) + Water (B)(L) = Radioactive_slurry (L) And Rocks (B)(P) UA
 
-Radioactive_Slurry (L) + Sulfuric_acid (L) = Yellowcake (P) 
+Radioactive_Slurry (L) + Sulfuric_acid (L) = Rocks (B)(P) + Uranium_Saturated_Sulfuric_Acid (L) UA
+
+[DEHPA + TOPO Production: 
+
+Sand (B)(P) + Heat (PRO)(1700C) = Molten_Glass (B)(L)
+
+Molten_Glass (B)(L) + Coal (P) = Silica (P) + Carbon_Monoxide (G) UA
+
+Carbon (S) + Silica (P) = Carbon/Silica Catalyst (P) UA
+
+Phosphorus_Rock (P) + Carbon/Silica Catalyst (P) + Heat (PRO)(300C) = White_Phosphorus (P) UA
+
+Chlorine (B)(L) + White_Phosphorus (P) = Phosphorus_Trichloride (L) UA
+
+Hydrogen (B)(G) + Ethylene (G) = Hydrogen/Ethylene_Mix (G) UA
+
+Aluminum (B)(S) + Hydrogen/Ethylene_Mix (G) = Triethylaluminium (L) UA
+
+Ethylene (G) + Triethylaluminium (L) = Alkylaluminium_Products
+
+Phosphorus_Trichloride (L) + 1-Ocantol (L) = Trioctylphosphine (L) UA
+
+]
+
+DEHPA (L) + Lamp_Oil (B)(L) = Incomplete_Organic_Extractant_Solution (L) UA
+
+Incomplete_Organic_Extractant_Solution (L) + TOPO (P) = Organic_Extractant_Solution (L) UA
+
+Organic_Extractant_Solution (L) + Uranium_Saturated_Sulfuric_Acid (L) = Organic_Uranium_Phase (L) + Aqueous_Uranium_Phase (L) UA
+
+Organic_Uranium_Phase (L) + Aqueous_Ammonia (L) = Ammonium_Diuranate (P) + Aqueous_Ammonia (L) UA 
+
+Ammonium_Diuranate (P) + Heat (PRO)(>500C) = Yellowcake (P) UA
 
 Potassium (B)(P) + Burning (PRO) = Caustic_Potash (B)(P)
 
@@ -135,7 +167,7 @@ Yellowcake (P) + hydrofluoric_acid (L) = uranium_tetrafluoride (P)
 
 urnaium_tetrafluoride (P) + fluorine (G) = uranium_hexafluoride (P) 
 
-uranium_hexafluoride (P) + Heat (56.5C) = uranium_hexafluoride_gas (G) ]
+uranium_hexafluoride (P) + Heat (PRO)(56.5C) = uranium_hexafluoride_gas (G) ]
 
 Enrichment: [
 

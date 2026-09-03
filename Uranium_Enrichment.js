@@ -1561,7 +1561,7 @@ reactions: {
                 let n = pixelMap[c.x][c.y];
                 if (!n) continue;
 
-                if (n.element === "natrual_gas") {
+                if (n.element === "natural_gas") {
                     if (Math.random() < 0.1) {
                         changePixel(pixel, "sour_gas");
                         deletePixel(c.x, c.y);
@@ -1570,8 +1570,8 @@ reactions: {
             }
         }
      };
- // ---------------- Natrual Gas ----------------
-    elements.natrual_gas = {
+ // ---------------- Natural Gas ----------------
+    elements.natural_gas = {
         color: "#d0d9c1",
         behavior: behaviors.GAS,
         category: "gases",
@@ -1579,7 +1579,7 @@ reactions: {
         density: .9,
         burn: 95,
         burnTime: 500,
-        burnInto: ["carbon_dioxide", "methane"],
+        burnInto: ["carbon_dioxide", "steam"],
     };
  // ---------------- Reactor Grade Uranium ----------------
     elements.reactor_grade_uranium = {

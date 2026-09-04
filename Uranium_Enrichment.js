@@ -541,10 +541,9 @@ reactions: {
                 if (!n) continue;
 
                 if (n.element === "sulfuric_acid") {
-                    if (Math.random() < 0.1) {
-                        changePixel(pixel, "");
+                    if (Math.random()<0.3){changePixel(pixel, "rock")} else {changePixel(pixel, "uranium_saturated_sulfuric_acid")}
                         deletePixel(c.x, c.y);
-                    }
+
                 }
             }
         }
